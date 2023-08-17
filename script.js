@@ -172,11 +172,13 @@ async function predictWebcam() {
     }
 }
 function drawBlendShapes(el, blendShapes) {
+    console.log(blendShapes);
     if (!blendShapes.length) {
         return;
     }
     console.log(blendShapes[0]);
     let htmlMaker = "";
+    
     blendShapes[0].categories.map((shape) => {
         htmlMaker += `
       <li class="blend-shapes-item">
