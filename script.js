@@ -110,6 +110,7 @@ function hasGetUserMedia() {
 if (hasGetUserMedia()) {
     
     enableWebcamButton = document.getElementById("webcamButton");
+    enableWebcamButton.click();
     enableWebcamButton.addEventListener("click", enableCam);
     enableWebcamButton.click();
 }
@@ -140,6 +141,7 @@ function enableCam(event) {
         video.addEventListener("loadeddata", predictWebcam);
     });
 }
+
 let lastVideoTime = -1;
 let results = undefined;
 const drawingUtils = new DrawingUtils(canvasCtx);
