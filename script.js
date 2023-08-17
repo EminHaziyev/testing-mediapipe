@@ -187,17 +187,24 @@ function drawBlendShapes(el, blendShapes) {
     `;
     });
     el.innerHTML = htmlMaker;
-    var data = [blendShapes[0].categories[10], blendShapes[0].categories[11], blendShapes[0].categories[13],blendShapes[0].categories[14], blendShapes[0].categories[18]]
+    var data = [
+        [{ event: blendShapes[0].categories[10] }, { name: "blink" }],
+        [{ event: blendShapes[0].categories[11] }, { name: "asagi" }],
+        [{ event: blendShapes[0].categories[13] }, { name: "sag" }],
+        [{ event: blendShapes[0].categories[14] }, { name: "sol" }],
+        [{ event: blendShapes[0].categories[18] }, { name: "yuxari" }],
+        blendShapes[0].categories[11], blendShapes[0].categories[13], blendShapes[0].categories[14], blendShapes[0].categories[18]]
     decide(data)
 }
 
 
-function decide(data){
+function decide(data) {
     data.forEach(el => {
-        if(parseFloat(el.score) >= 0.6){
+        if (parseFloat(el.event.score) >= 0.6 && el.name != "blink") {
+            
             alert(el.displayName || el.categoryName)
         }
 
-        
+
     });
 }
