@@ -172,36 +172,19 @@ async function predictWebcam() {
     }
 }
 function drawBlendShapes(el, blendShapes) {
-    // alert(JSON.stringify(blendShapes));
+    alert(JSON.stringify(blendShapes[0].categories[13]));
     if (!blendShapes.length) {
         return;
     }
     console.log(blendShapes[0]);
     let htmlMaker = "";
-
-    htmlMaker += `
+    blendShapes[0].categories.map((shape) => {
+        htmlMaker += `
       <li class="blend-shapes-item">
-        <span class="blend-shapes-label">${blendShapes[0].categories[13].displayName || blendShapes[0].categories[13].categoryName}</span>
+        <span class="blend-shapes-label">${shape.displayName || shape.categoryName}</span>
         <span class="blend-shapes-value" style="width: calc(${+shape.score * 100}% - 120px)">${(+shape.score).toFixed(4)}</span>
       </li>
     `;
-    htmlMaker += `
-      <li class="blend-shapes-item">
-        <span class="blend-shapes-label">${blendShapes[0].categories[14].displayName || blendShapes[0].categories[14].categoryName}</span>
-        <span class="blend-shapes-value" style="width: calc(${+shape.score * 100}% - 120px)">${(+shape.score).toFixed(4)}</span>
-      </li>
-    `;
-    htmlMaker += `
-      <li class="blend-shapes-item">
-        <span class="blend-shapes-label">${blendShapes[0].categories[9].displayName || blendShapes[0].categories[9].categoryName}</span>
-        <span class="blend-shapes-value" style="width: calc(${+shape.score * 100}% - 120px)">${(+shape.score).toFixed(4)}</span>
-      </li>
-    `;
-    htmlMaker += `
-      <li class="blend-shapes-item">
-        <span class="blend-shapes-label">${blendShapes[0].categories[11].displayName || blendShapes[0].categories[11].categoryName}</span>
-        <span class="blend-shapes-value" style="width: calc(${+shape.score * 100}% - 120px)">${(+shape.score).toFixed(4)}</span>
-      </li>
-    `;
+    });
     el.innerHTML = htmlMaker;
 }
