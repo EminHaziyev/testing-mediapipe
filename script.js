@@ -172,7 +172,7 @@ async function predictWebcam() {
     }
 }
 function drawBlendShapes(el, blendShapes) {
-    alert(JSON.stringify(blendShapes[0].categories[13]));
+    
     if (!blendShapes.length) {
         return;
     }
@@ -187,4 +187,5 @@ function drawBlendShapes(el, blendShapes) {
     `;
     });
     el.innerHTML = htmlMaker;
+    
 }
