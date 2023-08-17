@@ -172,7 +172,7 @@ async function predictWebcam() {
     }
 }
 function drawBlendShapes(el, blendShapes) {
-    alert(blendShapes);
+    alert(JSON.stringify(blendShapes));
     if (!blendShapes.length) {
         return;
     }
