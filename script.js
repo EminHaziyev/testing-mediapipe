@@ -213,7 +213,7 @@ function decide(data){
 
             
         }
-        else if(parseFloat(el.score) >= 0.7){
+        else if(parseFloat(el.score) >= 0.63){
             if(el.displayName ==  "eyeBlinkRight" || el.categoryName == "eyeBlinkRight" ){
                 alert("blink")
             }
