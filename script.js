@@ -109,8 +109,6 @@ function hasGetUserMedia() {
 // wants to activate it.
 if (hasGetUserMedia()) {
     enableCam();
-    enableWebcamButton = document.getElementById("webcamButton");
-    enableWebcamButton.addEventListener("click", enableCam);
 }
 else {
     console.warn("getUserMedia() is not supported by your browser");
@@ -123,11 +121,9 @@ function enableCam(event) {
     }
     if (webcamRunning === true) {
         webcamRunning = false;
-        enableWebcamButton.innerText = "ENABLE PREDICTIONS";
     }
     else {
         webcamRunning = true;
-        enableWebcamButton.innerText = "DISABLE PREDICTIONS";
     }
     // getUsermedia parameters.
     const constraints = {
