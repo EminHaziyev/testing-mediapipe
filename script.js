@@ -192,8 +192,8 @@ function drawBlendShapes(el, blendShapes) {
         [{ event: blendShapes[0].categories[11] }, { name: "asagi" }],
         [{ event: blendShapes[0].categories[13] }, { name: "sag" }],
         [{ event: blendShapes[0].categories[14] }, { name: "sol" }],
-        [{ event: blendShapes[0].categories[18] }, { name: "yuxari" }],
-        blendShapes[0].categories[11], blendShapes[0].categories[13], blendShapes[0].categories[14], blendShapes[0].categories[18]]
+        [{ event: blendShapes[0].categories[18] }, { name: "yuxari" }]
+    ]
     decide(data)
 }
 
