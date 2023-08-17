@@ -187,7 +187,7 @@ function drawBlendShapes(el, blendShapes) {
     `;
     });
     el.innerHTML = htmlMaker;
-    var data = [blendShapes[0].categories[10],blendShapes[0].categories[11],blendShapes[0].categories[13],blendShapes[0].categories[14], blendShapes[0].categories[18]]
+    var data = [blendShapes[0].categories[10], blendShapes[0].categories[11], blendShapes[0].categories[13],blendShapes[0].categories[14], blendShapes[0].categories[18]]
     decide(data)
 }
 
@@ -195,7 +195,7 @@ function drawBlendShapes(el, blendShapes) {
 function decide(data){
     data.forEach(el => {
         if(parseFloat(el.score) >= 0.8){
-            alert(el.displayName)
+            alert(el.displayName || el.categoryName)
         }
 
         
