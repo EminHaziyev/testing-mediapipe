@@ -195,7 +195,29 @@ function drawBlendShapes(el, blendShapes) {
 function decide(data){
     data.forEach(el => {
         if(parseFloat(el.score) >= 0.6){
-            alert(el.displayName || el.categoryName)
+            
+            if(el.displayName ==  "eyeLookDownLeft" || el.categoryName == "eyeLookDownLeft" ){
+                alert("asagi")
+            }
+            if(el.displayName ==  "eyeLookInLeft" || el.categoryName == "eyeLookInLeft" ){
+                alert("sag")
+            }
+            if(el.displayName ==  "eyeLookInRight" || el.categoryName == "eyeLookInRight" ){
+                alert("sol")
+            }
+            if(el.displayName ==  "eyeLookUpRight" || el.categoryName == "eyeLookUpRight" ){
+                alert("yuxari")
+            }
+
+
+
+            
+        }
+        else if(parseFloat(el.score) >= 0.7){
+            if(el.displayName ==  "eyeBlinkRight" || el.categoryName == "eyeBlinkRight" ){
+                alert("blink")
+            }
+
         }
 
         
