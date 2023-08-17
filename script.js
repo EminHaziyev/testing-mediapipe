@@ -194,7 +194,7 @@ function drawBlendShapes(el, blendShapes) {
 
 function decide(data){
     data.forEach(el => {
-        if(parseFloat(el.score) >= 0.3){
+        if(parseFloat(el.score) >= 0.4){
             alert(el.displayName || el.categoryName)
         }
 
